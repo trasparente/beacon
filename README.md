@@ -1,0 +1,2 @@
+# beacon
+Characteristic guidance signal
