@@ -1,0 +1,8 @@
+<div id="{{ include.id }}" class="modal">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    {%- if include.title -%}<h2>{{ include.title | default: "Modal" }}</h2>{%- endif -%}
+{% if include.body %}{{ include.body | markdownify }}{% endif %}
+{% if include.page %}{% capture body %}{% include {{ include.page }} %}{% endcapture %}{{ body | markdownify }}{% endif %}
+  </div>
+</div>

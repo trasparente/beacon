@@ -1,0 +1,27 @@
+# for jekyll-github-metadata
+repsitory: trasparente/beacon
+
+# To have /collection/page/ links
+permalink: pretty
+
+# Plugins list
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-github-metadata
+
+# Output collection
+collections:
+  docs:
+    output: true
+
+# Defaults
+defaults:
+  # Set default layout in collections
+  - scope:
+      type: docs
+    values:
+      layout: default
+
+# Timezone
+timezone: Europe/Rome

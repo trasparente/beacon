@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% comment %}
+{% include page/head/meta.html %}
+{% include page/head/social.html %}
+{% endcomment %}
+{% include page/head/favicons.html %}
+{% include page/head/stylesheet.html %}
+{% include page/head/javascript.html %}
+</head>
+  <body class="{{ page.title | slugify | default: 'default' }}">
+{% include page/header.html %}
+{% include page/navbar.html %}
+{% include page/main.html %}
+{% include page/modals.html %}
+{% include page/footer.html %}
+  </body>
+</html>

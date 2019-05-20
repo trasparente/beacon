@@ -1,0 +1,62 @@
+*, ::after, ::before
+  box-sizing: border-box
+
+// Background
+html, footer
+  background-color: $bg_html
+
+// Reset
+body
+  background-color: $color_bg
+  color: $color_fg
+  margin: 0
+  font-size: 18px
+  font-family: $font_body
+
+// Headings
+@include headings()
+  font-family: $font_headings
+
+// Containers
+.container
+  max-width: $container-width
+  margin: 0 auto
+
+// Vertical spacing
+main
+  @extend .pt-4, .pb-5
+header
+  @extend .py-3
+
+// Lists
+body ul li
+  line-height: 1.4em
+
+// Blockquotes
+blockquote
+  @extend .m-0, .px-4, .py-1
+  border-left: 7px solid gray
+  background: WhiteSmoke
+
+// Code
+pre.highlight
+  @extend .p-2
+  background-color: WhiteSmoke
+  white-space: pre-wrap
+  font-size: smaller
+
+// Grid
+.row
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+.col
+  -ms-flex-preferred-size: 0
+  flex-basis: 0
+  -ms-flex-positive: 1
+  flex-grow: 1
+  max-width: 100%
+  position: relative
+.col + .col
+  margin-left: 1em

@@ -1,0 +1,25 @@
+form
+  fieldset
+    @extend .py-3, .mt-3
+    *:last-child
+      @extend .mb-0
+  .fieldset
+    @extend .pt-3
+  input, label, select, small
+    display: block
+  small
+    @extend .my-2
+  .invalid
+    color: Crimson
+  .valid
+    color: DarkGreen
+  label
+    @extend .mb-1
+  a.button
+    -webkit-appearance: button
+    -moz-appearance: button
+    appearance: button
+    text-decoration: none
+    color: initial
+  input, button
+    color: $color_fg

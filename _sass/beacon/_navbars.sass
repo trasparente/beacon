@@ -1,0 +1,39 @@
+nav
+  text-transform: uppercase
+  background-color: $bg_navbar
+  ul
+    display: block
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      a
+        display: block
+        outline: none
+        padding: 1em
+      a.active
+        color: black
+      &.active a
+        color: black
+      .dropdown-menu
+        z-index: 1
+        display: block
+        a
+          padding: 0.5em 1em
+          background-color: $bg_navbar
+          margin-left: 1em
+      &.dropdown:hover .dropdown-menu
+        display: block
+
+@media (min-width: $small-screen)
+  nav ul
+    display: inline-block
+    &.right
+      float: right
+    li
+      display: inline-block
+      .dropdown-menu
+        display: none
+        position: absolute
+        a
+          margin-left: 0

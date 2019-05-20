@@ -1,0 +1,27 @@
+<form id="formCreate">
+  <label for="name">Schema Title</label>
+  <input type="text" name="title">
+  <br>
+  <label for="name">Schema description</label>
+  <input type="text" name="description">
+  <div class="body"></div>
+  <p><a href="#addProperty">Add</a> or <a href="#removeProperty">remove</a> property</p>
+  <input type="submit" value="Save">
+  <template id="t-name">
+    <label for="name">Property title</label>
+    <input type="text" name="title">
+    <div class="body"></div>
+    <p><a href="#addParameter">Add</a> or <a href="#removeParameter">remove</a> parameter</p>
+  </template>
+  <template id="t-parameter">
+    <div class="fieldset">
+      <label for="parameter">Parameter</label>
+      <select name="parameter" class="d-inline-block">
+        <option value="type">Type</option>
+        <option value="value">Value</option>
+        <option value="placeholder">Placeholder</option>
+      </select>
+      <input type="text" name="value" class="d-inline-block">
+    </div>
+  </template>
+</form>
