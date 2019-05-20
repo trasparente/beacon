@@ -1,4 +1,28 @@
 ---
 ---
+  
+// VARIABILES
+// Media queries
+$small_screen: {{ site.css.small.screen | default: "40em" }}
 
+// Layout
+$width_container: {{ site.css.width.container | default: "40em" }}
+
+// Backgrounds
+$bg_main: {{ site.css.bg.main | default: "White" }}
+$bg_html: {{ site.css.bg.html | default: "WhiteSmoke" }}
+$bg_navbar: {{ site.css.bg.navbar | default: "WhiteSmoke" }}
+
+// Colors
+$color_main: {{ site.css.color.main | default: "Black" }}
+// Links
+$color_link_main: {{ site.css.color.link.main | default: "MediumBlue" }}
+$color_link_hover: {{ site.css.color.link.color | default: "Crimson" }}
+$color_link_active: {{ site.css.color.link.active | default: "transparent" }}
+
+// Fonts
+$font_main: {{ site.css.font.main | default: "sans-serif" }}
+$font_headings: {{ site.css.font.headings | default: "serif" }}
+
+// STYLESHEET 
 @import beacon

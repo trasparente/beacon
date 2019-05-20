@@ -7,11 +7,11 @@ html, footer
 
 // Reset
 body
-  background-color: $color_bg
-  color: $color_fg
+  background-color: $bg_main
+  color: $color_main
   margin: 0
   font-size: 18px
-  font-family: $font_body
+  font-family: $font_main
 
 // Headings
 @include headings()
@@ -19,7 +19,7 @@ body
 
 // Containers
 .container
-  max-width: $container-width
+  max-width: $width_container
   margin: 0 auto
 
 // Vertical spacing
@@ -36,12 +36,12 @@ body ul li
 blockquote
   @extend .m-0, .px-4, .py-1
   border-left: 7px solid gray
-  background: WhiteSmoke
+  background: $bg_html
 
 // Code
 pre.highlight
   @extend .p-2
-  background-color: WhiteSmoke
+  background-color: $bg_html
   white-space: pre-wrap
   font-size: smaller
 

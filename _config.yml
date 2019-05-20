@@ -23,5 +23,25 @@ defaults:
     values:
       layout: default
 
+# Css style
+# css:
+#   small:
+#     screen: 40em
+#   width:
+#     container: 40em
+#   bg:
+#     main: White
+#     html: WhiteSmoke
+#     navbar: WhiteSmoke
+#   color:
+#     main: Black
+#     link:
+#       main: MediumBlue
+#       hover: Crimson
+#       active: transparent
+#     font:
+#       main: sans-serif
+#       headings: serif
+
 # Timezone
 timezone: Europe/Rome
