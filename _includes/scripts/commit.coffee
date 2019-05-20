@@ -5,14 +5,6 @@ commit = (e, file, object) ->
   submit = form.find "[type='submit']"
   feedback = form.find ".feedback"
   commit_url = "{{ site.github.api_url }}/repos/{{ site.github.repository_nwo }}/contents/_data/#{file}"
-  if file == ""
-    feedback.html "Input a valid path"
-    false
-  else if !storage.get("login.token")
-    modal_alert "You need to login", "danger"
-  else
-    # Start commit
-    get_sha()
   # Functions
   get_sha = () ->
     submit.prop "disabled", true
@@ -82,4 +74,13 @@ commit = (e, file, object) ->
     storage.set 'repository.sha', data.sha
     console.log data
     true
+  # Launch
+  if file == ""
+    feedback.html "Input a valid path"
+    false
+  else if !storage.get("login.token")
+    modal_alert "You need to login", "danger"
+  else
+    # Start commit
+    get_sha()
   return
