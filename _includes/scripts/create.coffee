@@ -37,6 +37,7 @@ $("#formCreate").each ->
   # Parse form
   parseForm = () ->
     data = {}
+    data["type"] = "schema"
     data["title"] = form.find(">[name='title']").val() if form.find(">[name='title']").val?()
     data["description"] = form.find(">[name='description']").val() if form.find(">[name='description']").val?()
     form.find("fieldset").each ->
