@@ -24,5 +24,23 @@ $color_link_active: {{ site.css.color.link.active | default: "transparent" }}
 $font_main: {{ site.css.font.main | default: "sans-serif" }}
 $font_headings: {{ site.css.font.headings | default: "serif" }}
 
-// STYLESHEET 
+/**
+ *
+ * Normalize
+ *
+ **/
+@import normalize/import-now
+
+/**
+ *
+ * Beacon
+ *
+ **/
 @import beacon
+
+/**
+ *
+ * Syntax Highlight
+ *
+ **/
+@import syntax
