@@ -11,10 +11,13 @@ $width_container: {{ site.css.width.container | default: "40em" }}
 // Backgrounds
 $bg_main: {{ site.css.bg.main | default: "White" }}
 $bg_html: {{ site.css.bg.html | default: "WhiteSmoke" }}
+$bg_code: {{ site.css.bg.code | default: "WhiteSmoke" }}
 $bg_navbar: {{ site.css.bg.navbar | default: "WhiteSmoke" }}
+$bg_sections: {% if site.css.bg.sections.size %}{% for bg_sections in site.css.bg.sections %}{{ bg_sections }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}''{% endif %}
 
 // Colors
 $color_main: {{ site.css.color.main | default: "Black" }}
+$color_muted: {{ site.css.color.muted | default: "Grey" }}
 // Links
 $color_link_main: {{ site.css.color.link.main | default: "MediumBlue" }}
 $color_link_hover: {{ site.css.color.link.color | default: "Crimson" }}

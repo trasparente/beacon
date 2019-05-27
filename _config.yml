@@ -23,7 +23,6 @@ defaults:
     values:
       layout: default
 
-# Css style
 # css:
 #   small:
 #     screen: 40em
@@ -33,8 +32,13 @@ defaults:
 #     main: White
 #     html: WhiteSmoke
 #     navbar: WhiteSmoke
+#     code: WhiteSmoke
+#   sections:
+#     - OldLace
+#     - Lavender
 #   color:
 #     main: Black
+#     muted: Grey
 #     link:
 #       main: MediumBlue
 #       hover: Crimson
@@ -42,6 +46,12 @@ defaults:
 #     font:
 #       main: sans-serif
 #       headings: serif
+
+css:
+  bg:
+    sections:
+      - LightCyan
+      - OldLace
 
 # Timezone
 timezone: Europe/Rome

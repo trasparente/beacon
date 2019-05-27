@@ -9,6 +9,7 @@ body
   margin: 0
   font-size: 18px
   font-family: $font_main
+  line-height: 1.5
 
 // Headings
 @include headings()
@@ -19,15 +20,12 @@ body
   max-width: $width_container
   margin: 0 auto
 
-// Vertical spacing
-main
-  @extend .pt-4, .pb-5
+// Header
 header
   @extend .py-3
-
-// Lists
-body ul li
-  line-height: 1.4em
+  div
+    .container
+    text-align: center
 
 // Blockquotes
 blockquote
@@ -35,25 +33,49 @@ blockquote
   border-left: 7px solid gray
   background: $bg_html
 
-// Code
-pre.highlight
-  @extend .p-2
-  background-color: $bg_html
-  white-space: pre-wrap
-  font-size: smaller
-
 // Grid
-.row
+// Section
+section
   display: -ms-flexbox
   display: flex
   -ms-flex-wrap: wrap
   flex-wrap: wrap
+  @extend .px-3
+  &:first-child
+    @extend .pt-4
+  &:last-child
+    @extend .pb-5
+  @for $i from 1 through length($bg_sections)
+    &.section#{$i}
+      background: nth($bg_sections, $i)
+@media (min-width: $small_screen)
+  section
+    padding: 0
+.row
+  @extend .container
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  flex-direction: column
+@media (min-width: $small_screen)
+  .row
+    flex-direction: row
 .col
   -ms-flex-preferred-size: 0
   flex-basis: 0
   -ms-flex-positive: 1
   flex-grow: 1
-  max-width: 100%
+  // max-width: 100%
   position: relative
-.col + .col
-  margin-left: 1em
+  // .col + .col
+  //   margin-left: 1em
+  &:only-child
+    @extend .container
+@media (min-width: $small_screen)
+  .col:not(:only-child)
+    max-width: 100%
+    &:not(:first-child)
+      margin-left: 0.5em
+    &:not(:last-child)
+      margin-right: 0.5em

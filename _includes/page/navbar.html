@@ -1,6 +1,6 @@
 <nav id="navigation">
-  <div class="{% include filter/fluid.html %}">
-    <ul class="left">
+  <div class="row">
+    <ul class="col">
       {%- assign html_pages = site.html_pages | sort: "weight" -%}
       {% for link in html_pages %}
       <li class="{% if page.url == link.url %}active{% endif %}">
@@ -22,7 +22,7 @@
       {% endif %}
       {%- endfor -%}
     </ul>
-    <ul class="right">
+    <ul>
       <li>
         <a href="#modalLogin">Login</a>
       </li>
