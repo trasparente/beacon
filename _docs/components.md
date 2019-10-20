@@ -3,6 +3,9 @@
 
 # Components
 
+* toc
+{:toc}
+
 ## Scaffolding
 
 By default page content is rendered inside a `<!--section--><!--column-->` tag.  
@@ -65,15 +68,63 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 <!--section-->
 
-## Markdown
+## Modals
 
-**Code block**
+Via liquid
 
-```yml
-example: 1
+```liquid
+{% raw %}{% include components/modal.html page="page/modals/info.html" id="myModal" %}{% endraw %}
 ```
 
-**Styles**
+```html
+<a href="#myModal">Modal link</a>
+```
+
+{% include components/modal.html page="page/modals/info.html" id="myModal" %}
+<a href="#myModal">Modal link</a>
+
+Via javascript
+
+```html
+<a href="#modalAlert" onclick="modal_alert('Example', 'danger')">Modal link<a/>
+```
+
+```cs
+modal_alert "Example", "danger"
+```
+
+<a href="#modalAlert" onclick="modal_alert('Example', 'danger')">Modal link<a/>
+
+## Markdown
+
+### Headers
+
+```md
+# 1 Header
+## 2 Header
+### 3 Header
+#### 4 Header
+##### 5 Header
+```
+
+# 1 Header
+{:.no_toc}
+## 2 Header
+{:.no_toc}
+### 3 Header
+{:.no_toc}
+#### 4 Header
+{:.no_toc}
+##### 5 Header
+{:.no_toc}
+
+**Text styles**
+
+```md
+- `code`
+- *oblique*
+- **Bold**
+```
 
 - `code`
 - *oblique*
@@ -81,8 +132,34 @@ example: 1
 
 **Horizontal line**
 
+```md
+---
+```
+
 ---
 
 **Blockquote**
 
+```
+> Lorem ...
+```
+
 > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+**Code block**
+
+<pre class="highlight"><code>```yml
+example: 1
+```</code></pre>
+
+```yml
+example: 1
+```
+
+## Alerts
+
+```liquid
+{% raw %}{% include components/blockquote.html body="Example" class="info" %}{% endraw %}
+```
+
+{% include components/blockquote.html body="Example" class="warning" %}

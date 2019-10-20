@@ -12,13 +12,31 @@ $width_container: {{ site.css.width.container | default: "40em" }}
 $bg_main: {{ site.css.bg.main | default: "White" }}
 $bg_html: {{ site.css.bg.html | default: "WhiteSmoke" }}
 $bg_code: {{ site.css.bg.code | default: "WhiteSmoke" }}
+$bg_modal: {{ site.css.bg.modal | default: "rgba(0,0,0,0.8)" }}
 $bg_navbar: {{ site.css.bg.navbar | default: "WhiteSmoke" }}
 $bg_sections: {% if site.css.bg.sections.size %}{% for bg_sections in site.css.bg.sections %}{{ bg_sections }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}''{% endif %}
+// Classes
+{% for class in site.css.classes %}.{{ class.first[0] }}
+  {% for attribute in class.first[1] %}{{ attribute[0] }}: {{ attribute[1] }}
+{% endfor %}
+{% endfor %}
 
+//
 // Colors
+//
 $color_main: {{ site.css.color.main | default: "Black" }}
 $color_muted: {{ site.css.color.muted | default: "Grey" }}
+// Blockquote
+$bg_blockquote: {{ site.css.bg.blockquote | default: "White" }}
+// Borders
+$border_blockquote_left: {{ site.css.border.blockquote.left | default: "none" }}
+//
+// Size
+//
+$size_blockquote_border: {{ site.css.size.blockquote.border | default: 0 }}
+//
 // Links
+//
 $color_link_main: {{ site.css.color.link.main | default: "MediumBlue" }}
 $color_link_hover: {{ site.css.color.link.color | default: "Crimson" }}
 $color_link_active: {{ site.css.color.link.active | default: "transparent" }}
@@ -26,6 +44,10 @@ $color_link_active: {{ site.css.color.link.active | default: "transparent" }}
 // Fonts
 $font_main: {{ site.css.font.main | default: "sans-serif" }}
 $font_headings: {{ site.css.font.headings | default: "serif" }}
+
+// Preassign default values
+$base-font-size: 18px
+$base-line-height: 1.5 * $base-font-size
 
 /**
  *

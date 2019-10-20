@@ -2,8 +2,8 @@
 {%- assign repository = github.public_repositories | where: "html_url", github.repository_url | first -%}
 {%- assign release = github.releases | first -%}
 - **Page**
-  - link: [`{{ page.url | absolute_url }}`]({{ page.url | absolute_url }})
-  - github_link: [`{{ github.repository_nwo | append: "/blob/" | append: repository.default_branch | append: "/" | append: page.path }}`]({% include filter/github_url.html page=page %})
+  - url: [`{{ page.url | absolute_url }}`]({{ page.url | absolute_url }})
+  - blob link on GitHub: [`{{ github.repository_nwo | append: "/blob/" | append: repository.default_branch | append: "/" | append: page.path }}`]({% include filter/github_url.html page=page %})
   - environment: `{{ github.environment }}`
   - title: `{{ page.title }}`
   - name: `{{ page.name }}`
@@ -28,7 +28,7 @@
   - is_project_page: `{{ github.is_project_page }}`
   - fork: `{{ repository.fork }}`
 - **GitHub**
-  - organization_members: size `{{ github.organization_members.size }}`
+  - organization_members size: `{{ github.organization_members.size }}`
   - contributors: `{{ github.contributors.size }}`
   - forks_count: `{{ repository.forks_count }}`
   - stargazers_count: `{{ repository.stargazers_count }}`

@@ -1,4 +1,4 @@
-// Background
+// Background color
 html, footer
   background-color: $bg_html
 
@@ -7,13 +7,18 @@ body
   background-color: $bg_main
   color: $color_main
   margin: 0
-  font-size: 18px
+  font-size: $base-font-size
   font-family: $font_main
-  line-height: 1.5
+  line-height: $base-line-height
 
 // Headings
+// Set font family
 @include headings()
   font-family: $font_headings
+@include headings('.col ')
+  padding-top: 2em
+@include headings('section:first-child .col ', ':first-child')
+  padding-top: 0
 
 // Containers
 .container
@@ -26,12 +31,6 @@ header
   div
     .container
     text-align: center
-
-// Blockquotes
-blockquote
-  @extend .m-0, .px-4, .py-1
-  border-left: 7px solid gray
-  background: $bg_html
 
 // Grid
 // Section

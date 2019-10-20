@@ -29,6 +29,10 @@ defaults:
 #   width:
 #     container: 40em
 #   bg:
+#     sections:
+#       - LightCyan
+#       - OldLace
+#     blockquote: WhiteSmoke
 #     main: White
 #     html: WhiteSmoke
 #     navbar: WhiteSmoke
@@ -36,6 +40,14 @@ defaults:
 #   sections:
 #     - OldLace
 #     - Lavender
+#   border:
+#     blockquote:
+#       left: "5px solid red"
+#   classes:
+#     - info:
+#         background: LightCyan
+#     - warning:
+#         background: OldLace
 #   color:
 #     main: Black
 #     muted: Grey
@@ -43,15 +55,9 @@ defaults:
 #       main: MediumBlue
 #       hover: Crimson
 #       active: transparent
-#     font:
-#       main: sans-serif
-#       headings: serif
-
-css:
-  bg:
-    sections:
-      - LightCyan
-      - OldLace
+#   font:
+#     main: sans-serif
+#     headings: serif
 
 # Timezone
 timezone: Europe/Rome
