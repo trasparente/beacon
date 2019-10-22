@@ -1,0 +1,4 @@
+<span datetime="{{ include.datetime | date: '%s' }}"{% if include.embed %} data-embed="true" {% endif %}{% if include.decimals %} data-decimals="{{ include.decimals }}"{% endif %}>{{ include.datetime }}</span>{% comment %}
+example
+{% include filter/datetime.html datetime = "2019-10-22 18:13:24 UTC" embed = true decimals=3 %}
+{% endcomment %}
