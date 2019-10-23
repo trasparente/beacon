@@ -1,0 +1,8 @@
+type: schema
+title: Datetimes
+description: 'Event schema'
+properties:
+  datetime:
+    type: date
+  title:
+    type: ""
