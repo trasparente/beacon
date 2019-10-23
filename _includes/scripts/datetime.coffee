@@ -31,6 +31,6 @@ dateTime = (e) ->
   # Set every minute
   setTimeout ->
     dateTime e
-  , 2 * 1000
+  , 60 * 1000
 
 $("[datetime]").each -> dateTime @
