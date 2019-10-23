@@ -1,12 +1,12 @@
-$("[datetime]").each ->
-  diff = new Date().getTime() - new Date($(@).attr("datetime")*1000)
+dateTime = (e) ->
+  diff = new Date().getTime() - new Date($(e).attr("datetime")*1000)
   minute = 1000 * 60
   hour = minute * 60
   day = hour * 24
   week = day * 7
   month = day * 30
   year = month * 12
-  decimals = $(@).data("decimals") || 0
+  decimals = $(e).data("decimals") || 0
   if diff > 0
     if diff < hour
       moment = "#{(diff / minute).toFixed decimals} minutes ago"
@@ -31,7 +31,13 @@ $("[datetime]").each ->
     else if -diff < year
       moment = "in #{(-diff / month).toFixed decimals} months"
     else moment = "in #{(-diff / year).toFixed decimals} years"
-  if $(@).data "embed"
-    $(@).append " (#{moment})"
+  if $(e).data "embed"
+    $(e).append " (#{moment})"
   else
-    $(@).attr "title", moment
+    $(e).attr "title", moment
+
+$("[datetime]").each ->
+  dateTime @
+  setTimeout ->
+    dateTime(@)
+  , 1000
