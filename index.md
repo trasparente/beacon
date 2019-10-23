@@ -7,4 +7,4 @@
 {% raw %}{% include page/modals/info.html %}{% endraw %}
 ```
 
-{% include page/modals/info.html %}
+{{ site.data | inspect }}
