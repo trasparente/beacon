@@ -14,7 +14,7 @@ $bg_html: {{ site.css.bg.html | default: "WhiteSmoke" }}
 $bg_code: {{ site.css.bg.code | default: "WhiteSmoke" }}
 $bg_modal: {{ site.css.bg.modal | default: "rgba(0,0,0,0.8)" }}
 $bg_navbar: {{ site.css.bg.navbar | default: "WhiteSmoke" }}
-$bg_sections: {% if site.css.bg.sections.size %}{% for bg_sections in site.css.bg.sections %}{{ bg_sections }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}''{% endif %}
+$bg_sections: {% if site.css.bg.sections.size %}{% for bg_sections in site.css.bg.sections %}{{ bg_sections }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}Azure, HoneyDew, Ivory, LavenderBlush{% endif %}
 // Classes
 {% for class in site.css.classes %}.{{ class.first[0] }}
   {% for attribute in class.first[1] %}{{ attribute[0] }}: {{ attribute[1] }}
