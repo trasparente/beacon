@@ -18,7 +18,7 @@
   - size: `{{ repository.size }}`
 - **Version**
   - build_revision: `{{ github.build_revision | truncate: 7, "" }}`
-  - updated_at: <code class="highlighter-rouge">{% include filter/datetime.html datetime = repository.updated_at embed =true%}</code>
+  - updated_at: <code class="highlighter-rouge">{% include filter/datetime.html datetime = repository.updated_at %}</code>
   - tag_name: `{{ release.tag_name }}`
   - name: `{{ release.name }}`
   - draft: `{{ release.draft }}`

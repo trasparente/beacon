@@ -1,0 +1,8 @@
+<pre class="highlight" data-yaml="true"><code class="highlight">{% if include.data %}{{ include.data | jsonify }}{% endif %}</code></pre>
+{% capture api %}
+Usable in standalone.
+
+```liquid
+{% raw %}{% include schema/preview.html data=page.svg %}{% endraw %}
+```
+{% endcapture %}

@@ -4,7 +4,7 @@
 # Home
 
 ```liquid
-{% raw %}{% include page/modals/info.html %}{% endraw %}
+{% raw %}{% include filter/yaml.html data=site.data %}{% endraw %}
 ```
 
-{{ site.data | inspect }}
+{% include filter/yaml.html data=site.data %}

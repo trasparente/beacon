@@ -1,4 +1,5 @@
 dateTime = (e) ->
+  $(e).css "cursor", "help"
   minute = 1000 * 60
   hour = minute * 60
   day = hour * 24
@@ -8,6 +9,7 @@ dateTime = (e) ->
   decimals = $(e).data("decimals") || 0
   diff = new Date().getTime() - new Date($(e).data("unix")*1000)
   absolute = Math.abs diff
+  # Check range
   if absolute < hour
     moment = "#{(absolute / minute).toFixed decimals} minutes"
   else if absolute < day
@@ -19,6 +21,7 @@ dateTime = (e) ->
   else if absolute < year
     moment = "#{(absolute / month).toFixed decimals} months"
   else moment = "#{(absolute / year).toFixed decimals} years"
+  # Past or Future
   if diff > 0
     out = "#{moment} ago"
   else
